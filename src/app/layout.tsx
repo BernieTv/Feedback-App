@@ -1,15 +1,17 @@
-import { Toaster } from "@/components/ui/toaster";
-import { cn } from "@/lib/utils/ui-utils";
-import type { Metadata } from "next";
-import { Noto_Sans } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Noto_Sans } from 'next/font/google';
 
-const notoSans = Noto_Sans({ subsets: ["latin"] });
+import { Toaster } from '@/components/ui/toaster';
+import { cn } from '@/lib/utils/ui-utils';
+
+import './globals.css';
+
+const notoSans = Noto_Sans({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Pulse | Real-time Q&A and Polls",
+  title: 'Pulse | Real-time Q&A and Polls',
   description:
-    "Connect with your audience with real-time Q&A and Polls with Pulse.",
+    'Connect with your audience with real-time Q&A and Polls with Pulse.',
 };
 
 export default function RootLayout({
@@ -19,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full" suppressHydrationWarning>
-      <body className={cn("h-full bg-zinc-100", notoSans.className)}>
+      <body className={cn('h-full bg-zinc-100', notoSans.className)}>
         {children}
 
         <Toaster />
