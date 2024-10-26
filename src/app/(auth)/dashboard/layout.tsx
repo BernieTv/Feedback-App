@@ -1,13 +1,14 @@
+import { PropsWithChildren } from 'react';
+import { redirect } from 'next/navigation';
+import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
+
 import {
   DesktopDashboardSidebar,
   MobileDashboardSidebar,
-} from "@/components/layout/DashboardSidebar";
-import routes from "@/config/routes";
-import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
-import { redirect } from "next/navigation";
-import { PropsWithChildren } from "react";
+} from '@/components/layout/DashboardSidebar';
+import routes from '@/config/routes';
 
-export const dynamic = "force-dynamic";
+export const dynamic = 'force-dynamic';
 
 const DashboardLayout = async ({ children }: PropsWithChildren) => {
   const isAuthenticated = await getKindeServerSession().isAuthenticated();

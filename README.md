@@ -2,9 +2,6 @@
 
 A full-stack Q&A and Polls platform inspired by Dory. Built with Next.js, Supabase, Prisma and Shadcn.
 
-You can follow along the entire development of this project here 👇
-[![Preview](https://github.com/user-attachments/assets/ac66d4c0-3167-45ff-8f9f-332a1070b732)](https://youtu.be/k8N9slcdHR8)
-
 ## Installation
 
 ```bash
