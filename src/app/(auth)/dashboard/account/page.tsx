@@ -1,7 +1,8 @@
-import { UserAvatar } from "@/components/UserAvatar";
-import { getUserInfo } from "@/lib/server/get-user-info";
-import { onlyDateFormatter } from "@/lib/utils/date-utils";
-import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
+
+import { UserAvatar } from '@/components/UserAvatar';
+import { getUserInfo } from '@/lib/server/get-user-info';
+import { onlyDateFormatter } from '@/lib/utils/date-utils';
 
 const AccountPage = async () => {
   const kindeUser = await getKindeServerSession().getUser();
@@ -9,7 +10,7 @@ const AccountPage = async () => {
   const user = kindeUser && (await getUserInfo(kindeUser.id));
 
   if (!user) {
-    throw new Error("Invalid user!");
+    throw new Error('Invalid user!');
   }
 
   return (
