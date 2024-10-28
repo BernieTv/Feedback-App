@@ -69,15 +69,14 @@ export const BookmarkEventButton = ({ event }: Props) => {
   };
 
   const performBookmark = useCallback(
-    () =>
-      debounce(
-        () => {
-          execute({ eventId: event.id });
-        },
-        1000,
-        { leading: false, trailing: true },
-      ),
-    [event.id, execute],
+    debounce(
+      () => {
+        execute({ eventId: event.id });
+      },
+      1000,
+      { leading: false, trailing: true },
+    ),
+    [event.id],
   );
 
   if (isParticipantView) {
