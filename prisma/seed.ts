@@ -6,7 +6,7 @@ import colors from 'tailwindcss/colors';
 const prisma = new PrismaClient();
 
 // NOTE: IMPORTANT to replace with an user id registered in Kinde
-const myUserId = 'kp_4fc8a0fbaaf04a0abbeac48eaa501595';
+const myUserId = 'kp_9cff55778bbf4135a9713e4055aaf3be';
 
 const runSeed = async () => {
   await resetDB();
@@ -16,8 +16,8 @@ const runSeed = async () => {
   const myUser = await prisma.user.create({
     data: {
       id: myUserId,
-      displayName: 'Alice',
-      email: 'yaroyac242@biscoine.com',
+      displayName: 'Bekzod',
+      email: 'bektuxtasiov@gmail.com',
       color: colors.red['500'],
     },
   });
@@ -88,6 +88,7 @@ const runSeed = async () => {
       },
     });
   }
+
   printCheckMark();
 
   process.stdout.write('Generating polls...');
@@ -148,11 +149,11 @@ const runSeed = async () => {
 const resetDB = async () => {
   process.stdout.write('Resetting database...');
 
-  await prisma.notification.deleteMany();
+  await prisma.user.deleteMany();
   await prisma.event.deleteMany();
   await prisma.poll.deleteMany();
   await prisma.question.deleteMany();
-  await prisma.user.deleteMany();
+  await prisma.notification.deleteMany();
 
   printCheckMark();
 };
