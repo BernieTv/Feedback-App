@@ -141,8 +141,8 @@ export const Question = ({ question }: Props) => {
 
           {isEditing && (
             <form
-              onSubmit={(evt) => {
-                evt.preventDefault();
+              onSubmit={(e) => {
+                e.preventDefault();
 
                 handleBodyChange();
               }}
