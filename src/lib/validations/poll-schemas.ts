@@ -38,5 +38,5 @@ export const createLivePollSchema = z.object({
 });
 
 export type VotePollSchema = z.infer<typeof votePollOptionSchema>;
-export type CreateLivePollSchema = z.infer<typeof createLivePollSchema>;
 export type GetPollSchema = z.infer<typeof getPollSchema>;
+export type CreateLivePollSchema = z.infer<typeof createLivePollSchema>;
