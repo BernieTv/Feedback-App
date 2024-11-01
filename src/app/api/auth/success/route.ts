@@ -7,7 +7,7 @@ import routes, { baseUrl } from '@/config/routes';
 import { prisma } from '@/lib/prisma/client';
 
 // will run every time a user signs up or sign in
-async function GET() {
+export async function GET() {
   const { getUser } = getKindeServerSession();
 
   const user = await getUser();
