@@ -44,8 +44,8 @@ export const ClosePollDialog = ({
     },
   });
 
-  const handleClose = (evt: React.MouseEvent) => {
-    evt.preventDefault();
+  const handleClose = (e: React.MouseEvent) => {
+    e.preventDefault();
 
     execute({ pollId });
   };
